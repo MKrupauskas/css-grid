@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/style.css">
+  <title>CSS Grid Alignment + Centering!</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="key key-1">1</div>
+    <div class="key key-2">2</div>
+    <div class="key key-3">3</div>
+    <div class="key key-4">4</div>
+    <div class="key key-5">5</div>
+    <div class="key key-6">6</div>
+    <div class="key key-7">7</div>
+    <div class="key key-8">8</div>
+    <div class="key key-9">9</div>
+    <div class="key key-10">10</div>
+  </div>
+
+  <style>
+    /*
+      justify-items:
+      align-items:
+
+      justify-content:
+      align-content:
+
+      align-self:
+      justify-self:
+
+      justify-* is row axis
+      align-* is column axis
+    */
+
+    .container {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(5, 100px);
+      grid-template-rows: repeat(5, 100px);
+      place-items: center;
+      justify-content: space-between;
+      align-content: end;
+    }
+
+    .key {
+      background: whitesmoke;
+      padding: 1rem;
+    }
+
+    .key-7 {
+      align-self: end;
+    }
+  </style>
+</body>
+
+</html>
